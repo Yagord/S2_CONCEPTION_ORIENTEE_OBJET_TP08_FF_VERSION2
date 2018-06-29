@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="build">
+	<path id="build.classpath">
+		<pathelement location="classes"/>
+	</path>
+	<target name="init">
+		<mkdir dir="classes"/>
+	</target>
+	<target name="clean">
+		<delete dir="classes"/>
+	</target>
+	<target depends="init" name="build">
+		<javac srcdir="." destdir="classes" source="1.5" target="1.5" fork="yes">
+			<classpath refid="build.classpath"/>
+			<include name="FontSpaceInvaders.java"/>
+			<include name="iut/ObjetTouchable.java"/>
+			<include name="iut/Audio.java"/>
+			<include name="iut/Jeu.java"/>
+			<include name="iut/Objet.java"/>
+			<include name="VagueEnnemi.java"/>
+			<include name="Ennemi1.java"/>
+			<include name="Ennemi2.java"/>
+			<include name="Ennemi3.java"/>
+			<include name="Tireur.java"/>
+			<include name="Ennemi.java"/>
+			<include name="Mur.java"/>
+			<include name="PartieMur.java"/>
+			<include name="BalleJoueur.java"/>
+			<include name="Balle.java"/>
+			<include name="Mystery.java"/>
+			<include name="Joueur.java"/>
+			<include name="Score.java"/>
+			<include name="HighScore.java"/>
+			<include name="EcranGagne.java"/>
+			<include name="EcranPerdu.java"/>
+			<include name="EcranFinJeu.java"/>
+			<include name="Ecran.java"/>
+			<include name="SpaceInvaders.java"/>
+			<include name="BalleInvader.java"/>
+			<include name="GestionFichier.java"/>
+		</javac>
+	</target>
+</project>
